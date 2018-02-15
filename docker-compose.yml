@@ -2,9 +2,13 @@ version: '3'
 services:
   frontend:
     build: ./frontend
+    environment:
+    - ENDPOINT=http://localhost:9000/api
     ports:
      - "8000:8000"
   backend:
     build: ./backend
+    environment:
+    - APPID=8a7b3cc41c5200afe58e1f0badf55a20
     ports:
-     - "9000:9000"
+    - "9000:9000"
