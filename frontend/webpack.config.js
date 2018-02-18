@@ -9,11 +9,14 @@ module.exports = {
     extensions: ['.js', '.jsx'],
   },
   devServer: {
+    hot:true,
     contentBase: 'src/public',
     historyApiFallback: true,
     port: 8000,
-    host: '0.0.0.0',
+    host: '0.0.0.0', 
+   
   },
+  watchOptions: { poll: true },
   devtool: 'eval',
   output: {
     filename: 'index.jsx',

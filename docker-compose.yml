@@ -1,14 +1,22 @@
 version: '3'
 services:
   frontend:
-    build: ./frontend
+    build: 
+      context: ./frontend
     environment:
-    - ENDPOINT=http://localhost:9000/api
+      - ENDPOINT=http://localhost:9000/api
+      - NODE_ENV=development
     ports:
      - "8000:8000"
+    volumes:
+      - ./frontend/src:/frontend/src 
   backend:
-    build: ./backend
+    build: 
+      context: ./backend
     environment:
-    - APPID=8a7b3cc41c5200afe58e1f0badf55a20
+      - APPID=8a7b3cc41c5200afe58e1f0badf55a20
+      - NODE_ENV=development
     ports:
-    - "9000:9000"
+      - "9000:9000" 
+    volumes:
+      - ./backend/src:/backend/src   

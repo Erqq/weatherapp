@@ -1,16 +1,19 @@
 FROM node:carbon
 
 
+RUN mkdir -p /backend
+WORKDIR /backend
+COPY ./ ./
 
-WORKDIR /usr/src/app
+COPY package.json /backend
 
-COPY package*.json ./
 
 RUN npm install
 
-COPY . .
-
-
-
 EXPOSE 9000
-CMD [ "npm", "start" ]
+CMD if [ ${NODE_ENV} = production ]; \
+	then \
+	npm run start; \
+	else \
+	npm run dev; \
+	fi
