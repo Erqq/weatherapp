@@ -14,7 +14,7 @@ services:
     build: 
       context: ./backend
     environment:
-      - APPID=8a7b3cc41c5200afe58e1f0badf55a20
+      - APPID=e557dda35ce7f17314b70fe4c595a9ae
       - NODE_ENV=development
     ports:
       - "9000:9000" 

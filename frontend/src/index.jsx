@@ -25,15 +25,20 @@ class Weather extends React.Component {
 
   async componentWillMount() {
     const weather = await getWeatherFromApi();
-    this.setState({icon: weather.icon.slice(0, -1)});
+    console.log(weather);
+    this.setState({city: weather.city.name})
+    this.setState({icon: weather.list.slice(0,3).map(item =>{return ([<h2>{item.dt_txt}</h2>,<img src={`/img/${item.weather[0].icon.slice(0, -1)}.svg`}/>])})});
+    
   }
-
+  
   render() {
     const { icon } = this.state;
-
+    const { city} = this.state;
     return (
       <div className="icon">
-      { icon && <img src={`/img/${icon}.svg`} /> }
+       <h1>{city}</h1>
+      { icon }
+     
       </div>
     );
   }
