@@ -7,6 +7,9 @@
   },
   "rules": {
     "semi": ["error", "always"],
-    "comma-dangle": ["error", "always"]
+    "comma-dangle": ["error", "always"],
+    "linebreak-style": ["error", "windows"],
+    "no-multiple-empty-lines": "error"
+    
   }
 }

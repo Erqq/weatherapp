@@ -5,7 +5,7 @@ services:
       context: ./frontend
     environment:
       - ENDPOINT=http://localhost:9000/api
-      - NODE_ENV=development
+      - NODE_ENV=dev
     ports:
      - "8000:8000"
     volumes:
@@ -15,7 +15,7 @@ services:
       context: ./backend
     environment:
       - APPID=e557dda35ce7f17314b70fe4c595a9ae
-      - NODE_ENV=development
+      - NODE_ENV=dev
     ports:
       - "9000:9000" 
     volumes:

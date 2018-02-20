@@ -5,13 +5,12 @@ FROM node:carbon
 
 RUN mkdir -p /frontend
 WORKDIR /frontend
-COPY ./ ./
+COPY . ./
 
 COPY package.json /frontend
 
 
 RUN npm install
-
 
 
 
@@ -22,6 +21,10 @@ CMD if [ ${NODE_ENV} = production ]; \
 	npm run build && \
 	cd build && \
 	hs -p 8000; \
+	elif [ ${NODE_ENV} = lint ];\
+	then\
+	npm run lint;\
 	else \
 	npm run start; \
 	fi
+

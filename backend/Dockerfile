@@ -14,6 +14,9 @@ EXPOSE 9000
 CMD if [ ${NODE_ENV} = production ]; \
 	then \
 	npm run start; \
+	elif [ ${NODE_ENV} = lint ]; \
+	then\
+	npm run lint;\
 	else \
 	npm run dev; \
 	fi
