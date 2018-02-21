@@ -12,9 +12,10 @@
   "dependencies": {
     "debug": "^2.6.3",
     "kcors": "^2.2.1",
-    "koa": "^2.2.0",
+    "koa": "^2.5.0",
     "koa-json": "^2.0.2",
-    "koa-router": "^7.2.0",
+    "koa-bodyparser":"^4.2.0",
+    "koa-router": "^7.3.0",
     "node-fetch": "^1.6.3"
   },
   "devDependencies": {
