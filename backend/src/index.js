@@ -9,11 +9,7 @@ const mapURI = process.env.MAP_ENDPOINT || 'http://api.openweathermap.org/data/2
 const targetCity = process.env.TARGET_CITY || 'Helsinki,fi';
 const port = process.env.PORT || 9000;
 const app = new Koa();
-const options = {
-  origin: true,
-  credentials: true,
-  methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
-};
+
 app.use(cors()).use(json()).use(bodyParser());
 
 const fetchWeather = async () => {

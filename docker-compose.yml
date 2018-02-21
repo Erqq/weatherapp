@@ -15,7 +15,7 @@ services:
       context: ./backend
     environment:
       - APPID=e557dda35ce7f17314b70fe4c595a9ae
-      - NODE_ENV=dev
+      - NODE_ENV=production
     ports:
       - "9000:9000" 
     volumes:

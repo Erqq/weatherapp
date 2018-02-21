@@ -11,11 +11,12 @@
     "semi": ["error", "always"],
     "comma-dangle": ["error", "always-multiline"],
     "linebreak-style": ["error", "windows"],
-    "no-console": ["error", {"allow": ["warn", "error"] }]
-
+    "no-console": ["error", {"allow": ["warn", "error"] }],
+    "no-use-before-define": [2, { "functions": false, "classes": true }]
   },
   "globals": {
     "fetch": false,
-    "document": true
+    "document": true,
+    "navigator":true
   }
 }
