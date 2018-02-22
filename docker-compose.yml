@@ -4,8 +4,8 @@ services:
     build: 
       context: ./frontend
     environment:
-      - ENDPOINT=http://localhost:9000/api
-      - NODE_ENV=dev
+      - ENDPOINT=http://0.0.0.0:9000/api
+      - NODE_ENV=production
     ports:
      - "8000:8000"
     volumes:

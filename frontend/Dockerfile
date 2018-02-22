@@ -15,10 +15,12 @@ RUN npm install
 
 
 EXPOSE 8000
-CMD if[ ${NODE_ENV} = lint ];\
+CMD if [ ${NODE_ENV} = production ]; \
+	then \
+	npm run deploy; \
+	elif [ ${NODE_ENV} = lint ]; \
 	then\
 	npm run lint;\
 	else \
 	npm run start; \
 	fi
-
