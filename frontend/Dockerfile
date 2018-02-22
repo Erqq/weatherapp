@@ -14,7 +14,7 @@ RUN npm install
 
 
 
-EXPOSE 8000
+EXPOSE 80
 CMD if [ ${NODE_ENV} = production ]; \
 	then \
 	npm run deploy; \
